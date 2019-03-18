@@ -1,4 +1,3 @@
-using Test
 
 # development often happens in lockstep with other packages,
 # so check-out the master branch of those packages.
@@ -22,6 +21,7 @@ testf(f, xs...; kwargs...) = GPUArrays.TestSuite.compare(f, CuArray, xs...; kwar
 
 allowscalar(false)
 
+using Test
 @testset "CuArrays" begin
 
 include("base.jl")
